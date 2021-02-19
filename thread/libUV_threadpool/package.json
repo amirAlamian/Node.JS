@@ -1,0 +1,11 @@
+{
+  "name": "thread",
+  "version": "1.0.0",
+  "description": "",
+  "main": "multiThreadProgram.js",
+  "scripts": {
+    "start": "set UV_THREADPOOL_SIZE=5 && node multiThreadProgram.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
