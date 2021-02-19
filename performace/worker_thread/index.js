@@ -2,12 +2,6 @@ const express = require('express');
 const Worker = require('webworker-threads').Worker
 const app = express()
 
-async function blockEventLoop(blockTime) {
-    const start = Date.now();
-
-    while (Date.now() - start < blockTime) {
-    } 
-}
 app.get('/',async (req, res) => {
         worker = new Worker(function() { // this function will be stringify and send to worker thread out side of our app so we can't access our app variables in it
             this.onmessage = function () {
